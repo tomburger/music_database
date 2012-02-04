@@ -1,0 +1,49 @@
+require 'test_helper'
+
+class AppearencesControllerTest < ActionController::TestCase
+  setup do
+    @appearence = appearences(:one)
+  end
+
+  test "should get index" do
+    get :index
+    assert_response :success
+    assert_not_nil assigns(:appearences)
+  end
+
+  test "should get new" do
+    get :new
+    assert_response :success
+  end
+
+  test "should create appearence" do
+    assert_difference('Appearence.count') do
+      post :create, appearence: @appearence.attributes
+    end
+
+    assert_redirected_to appearence_path(assigns(:appearence))
+  end
+
+  test "should show appearence" do
+    get :show, id: @appearence
+    assert_response :success
+  end
+
+  test "should get edit" do
+    get :edit, id: @appearence
+    assert_response :success
+  end
+
+  test "should update appearence" do
+    put :update, id: @appearence, appearence: @appearence.attributes
+    assert_redirected_to appearence_path(assigns(:appearence))
+  end
+
+  test "should destroy appearence" do
+    assert_difference('Appearence.count', -1) do
+      delete :destroy, id: @appearence
+    end
+
+    assert_redirected_to appearences_path
+  end
+end

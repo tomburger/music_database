@@ -1,0 +1,29 @@
+<%= form_for(@appearance) do |f| %>
+  <% if @appearance.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@appearance.errors.count, "error") %> prohibited this appearance from being saved:</h2>
+
+      <ul>
+      <% @appearance.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :record_id %><br />
+    <%= f.number_field :record_id %>
+  </div>
+  <div class="field">
+    <%= f.label :artist_id %><br />
+    <%= f.number_field :artist_id %>
+  </div>
+  <div class="field">
+    <%= f.label :lead %><br />
+    <%= f.check_box :lead %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

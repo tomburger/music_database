@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Record:</b>
+  <%= show_name @appearance.record %>
+</p>
+
+<p>
+  <b>Artist:</b>
+  <%= show_name @appearance.artist %>
+</p>
+
+<p>
+  <b>Lead:</b>
+  <%= @appearance.lead %>
+</p>
+
+
+<%= link_to 'Edit', edit_appearance_path(@appearance) %> |
+<%= link_to 'Back', appearances_path %>

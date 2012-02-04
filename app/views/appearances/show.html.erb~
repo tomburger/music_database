@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Record:</b>
+  <%= @appearance.record_id %>
+</p>
+
+<p>
+  <b>Artist:</b>
+  <%= @appearance.artist_id %>
+</p>
+
+<p>
+  <b>Lead:</b>
+  <%= @appearance.lead %>
+</p>
+
+
+<%= link_to 'Edit', edit_appearance_path(@appearance) %> |
+<%= link_to 'Back', appearances_path %>

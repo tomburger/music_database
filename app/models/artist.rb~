@@ -1,0 +1,6 @@
+class Artist < ActiveRecord::Base
+  has_many :appearances
+  def records
+    return appearances.find_all_by_lead(true).map { |ap| ap.record }
+  end
+end

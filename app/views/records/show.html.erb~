@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @record.name %>
+</p>
+
+<p>
+  <b>Year:</b>
+  <%= @record.year %>
+</p>
+
+<p>
+  <b>Notes:</b>
+  <%= @record.notes %>
+</p>
+
+<p>
+  <b>Appearances: </b> 
+  <% @record.appearances.each do |appearance| %>
+    <%= link_to appearance.artist.name, appearance.artist %>
+  <% end %>  
+</p>
+
+<%= button_to 'Add artist', add_artist_to_record_path(@record) %>
+
+<%= link_to 'Edit', edit_record_path(@record) %> |
+<%= link_to 'Back', records_path %>

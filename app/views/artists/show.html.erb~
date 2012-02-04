@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @artist.name %>
+</p>
+
+<p>
+  <b>Born:</b>
+  <%= @artist.born %>
+</p>
+
+<p>
+  <b>Notes:</b>
+  <%= @artist.notes %>
+</p>
+
+<%= render 'records' %>
+
+<%= button_to 'Add record', appearances_path(artist_id: @artist) %>
+
+<%= link_to 'Edit', edit_artist_path(@artist) %> |
+<%= link_to 'Back', artists_path %>

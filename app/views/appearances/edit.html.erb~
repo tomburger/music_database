@@ -1,0 +1,6 @@
+<h1>Editing appearence</h1>
+
+<%= render 'form' %>
+
+<%= link_to 'Show', @appearence %> |
+<%= link_to 'Back', appearences_path %>

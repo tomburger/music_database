@@ -1,0 +1,27 @@
+<h1>Listing appearances</h1>
+
+<table>
+  <tr>
+    <th>Record</th>
+    <th>Artist</th>
+    <th>Lead</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @appearances.each do |appearance| %>
+  <tr>
+    <td><%= show_name(appearance.record) %></td>
+    <td><%= show_name(appearance.artist) %></td>
+    <td><%= appearance.lead %></td>
+    <td><%= link_to 'Show', appearance %></td>
+    <td><%= link_to 'Edit', edit_appearance_path(appearance) %></td>
+    <td><%= link_to 'Destroy', appearance, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Appearance', new_appearance_path %>

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  record_id: 1
+  artist_id: 1
+  lead: false
+
+two:
+  record_id: 1
+  artist_id: 1
+  lead: false

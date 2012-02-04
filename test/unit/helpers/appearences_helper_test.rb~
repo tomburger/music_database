@@ -1,0 +1,4 @@
+require 'test_helper'
+
+class AppearencesHelperTest < ActionView::TestCase
+end

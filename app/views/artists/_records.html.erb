@@ -1,0 +1,7 @@
+<p>
+  <b>Records:</b>
+  <% @artist.records.each do |record| %>
+   <%= link_to show_name(record), record %>
+  <% end %>
+</p>
+
